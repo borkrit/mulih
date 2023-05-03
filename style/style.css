@@ -1,1 +1,105 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
+:root {
+  --accent-color: #69B99D;
+  --second-colot:#A6A6A6;
+  --bg-second:#F5F5F5;
+  --main-text-color:#1F2744;
+  --description-color:#73788C;
+  --white-color: #fff;
+  --link-color:#8E8E8E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* img {
+  max-width: 100%;
+}
+
+.title {
+  font-family: "Rubik", sans-serif;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0.5px;
+  color: #054457;
+}
+
+[class*=__container] {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 32px 0;
+  position: fixed;
+  width: 100%;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__navigation {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.header__buttons {
+  display: flex;
+  gap: 8px;
+}
+.header__btn {
+  border: none;
+  background-color: transparent;
+  padding: 16px 48px;
+  color: var(--white-color);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.0025em;
+  cursor: pointer;
+}
+
+.menu__body {
+  display: flex;
+  gap: 48px;
+}
+.menu__item {
+  position: relative;
+}
+.menu__link {
+  color: var(--link-color);
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+}
+.menu__link:hover {
+  color: var(--accent-color);
+}
+
+.registration {
+  color: var(--accent-color);
+}
+
+.login {
+  background-color: var(--accent-color);
+}
+
+.hero {
+  background-color: var(--bg-second);
+  height: 90vh;
+  width: 100vw;
+  background-image: url(../assets/bg.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}/*# sourceMappingURL=style.css.map */
