@@ -37,107 +37,169 @@
         </div>
 
     </header>
-    <section class="hero">
-        <div class="hero__container">
-           <div class="hero__content">
-            <p class="hero__lable lable">
-                REAL ESTATE
-            </p>
-            <h1 class="hero__title title">Let's hunt for your dream residence</h1>
-            <p class="hero__subtitle ">Explore our range of beautiful properties with the addition of separate accommodation suitable for you.</p>
-            <div class="hero__filter">
+    <main>
+        <section class="hero">
+            <div class="hero__container">
+               <div class="hero__content">
+                <p class="hero__lable lable">
+                    REAL ESTATE
+                </p>
+                <h1 class="hero__title title">Let's hunt for your dream residence</h1>
+                <p class="hero__subtitle ">Explore our range of beautiful properties with the addition of separate accommodation suitable for you.</p>
+                <div class="hero__filter filter">
+                    <div class="filter__header">
+                        <button class="filter__tab active " onclick="openCity(event, 'buy')" >Buy</button>
+                        <button class="filter__tab" onclick="openCity(event, 'rent')">Rent</button>
+                    </div>
+                    <div id="buy" style="display: flex;" class="filter__body">
 
+                        <label for="location">Location
+                            <select name="location" id="">
+                                <option value="">Bogor, Jawa Barat</option>
+                                <option value="">Bogor, Jawa Barat</option>
+                                <option value="">Bogor, Jawa Barat</option>
+                            </select>
+                        </label>
+                        <label for="type">Type
+                            <select name="type" id="">
+                                <option value="">Home</option>
+                                <option value="">Apartment</option>
+                            </select>
+                        </label>
+                        <label for="price">Price Range
+                            <select name="price" id="">
+                                <option value="">$200 - $350</option>
+                                <option value="">$351 - $600</option>
+                            </select>
+                        </label>
+
+
+
+
+                        <button class="btn filter__button" >Search</button>
+                    </div>
+                    <div id="rent" class="filter__body">
+
+                        <label for="location">Location Rent
+                            <select name="location" id="">
+                                <option value="">Bogor, Jawa Barat</option>
+                                <option value="">Bogor, Jawa Barat</option>
+                                <option value="">Bogor, Jawa Barat</option>
+                            </select>
+                        </label>
+                        <label for="type">Type
+                            <select name="type" id="">
+                                <option value="">Home</option>
+                                <option value="">Apartment</option>
+                            </select>
+                        </label>
+                        <label for="price">Price Range
+                            <select name="price" id="">
+                                <option value="">$200 - $350</option>
+                                <option value="">$351 - $600</option>
+                            </select>
+                        </label>
+
+
+
+
+                        <button class="btn filter__button" >Search</button>
+                    </div>
+                    
+    
+                </div>
             </div>
-        </div>
-
-        </div>
-    </section>
-    <section class="recomendation" id="recomendation">
-        <div class="recomendation__container">
-            <div class="recomendation__header">
-                <p class="recomendation__lable lable">
-                    DISCOVER
-                </p>
-                <h3 class="recomendation__title title">
-                    Best recomendation
-                </h3>
-                <p class="recomendation__subtitle subtitle">
-                    Discover our exclusive selection of the finest one-of-a-kind luxury properties architectural masterpieces.
-                </p>
-                <p class="recomendation__learn-more">
-                    Learn More  
+    
+            </div>
+        </section>
+        <section class="recomendation" id="recomendation">
+            <div class="recomendation__container">
+                <div class="recomendation__header">
+                    <p class="recomendation__lable lable">
+                        DISCOVER
+                    </p>
+                    <h3 class="recomendation__title title">
+                        Best recomendation
+                    </h3>
+                    <p class="recomendation__subtitle subtitle">
+                        Discover our exclusive selection of the finest one-of-a-kind luxury properties architectural masterpieces.
+                    </p>
+                    <p class="recomendation__learn-more">
+                        Learn More  
+                       
+                            
+                    </p>
+                </div>
                    
-                        
-                </p>
+    
+                <div class="recomendation__list">
+                    <div class="recomendation__item item">
+                        <div class="item__img"><img src="assets/recomendation-1.png" alt=""></div>
+                        <div class="item__content">
+                            <p class="item__title">Perum griya asri</p>
+                            <p class="item__location">Bogor, Jawa Barat</p>
+    
+                                <p class="item__price">
+                                    $25,000
+                                </p>
+                                <p class="item__place-aria">360<sup><small>m2</small></sup>  <span>
+                                    Living Area
+                                </span> </p>
+                           
+    
+                            <button class="item__button  btn">Send Inquiry</button>
+                        </div>
+    
+                    </div>
+                    <div class="recomendation__item item">
+                        <div class="item__img"><img src="assets/recomendation-2.png" alt=""></div>
+                        <div class="item__content">
+                            <p class="item__title">Perum griya asri</p>
+                            <p class="item__location">Bogor, Jawa Barat</p>
+    
+                                <p class="item__price">
+                                    $25,000
+                                </p>
+                                <p class="item__place-aria">360<sup><small>m2</small></sup>  <span>
+                                    Living Area
+                                </span> </p>
+                           
+    
+                            <button class="item__button  btn">Send Inquiry</button>
+                        </div>
+    
+                    </div>
+                    <div class="recomendation__item item">
+                        <div class="item__img"><img src="assets/recomendation-3.png" alt=""></div>
+                        <div class="item__content">
+                            <p class="item__title">Perum griya asri</p>
+                            <p class="item__location">Bogor, Jawa Barat</p>
+    
+                                <p class="item__price">
+                                    $25,000
+                                </p>
+                                <p class="item__place-aria">360<sup><small>m2</small></sup>  <span>
+                                    Living Area
+                                </span> </p>
+                           
+    
+                            <button class="item__button  btn">Send Inquiry</button>
+                        </div>
+    
+                    </div>
+                </div>
+    
             </div>
-               
-
-            <div class="recomendation__list">
-                <div class="recomendation__item item">
-                    <div class="item__img"><img src="assets/recomendation-1.png" alt=""></div>
-                    <div class="item__content">
-                        <p class="item__title">Perum griya asri</p>
-                        <p class="item__location">Bogor, Jawa Barat</p>
-
-                            <p class="item__price">
-                                $25,000
-                            </p>
-                            <p class="item__place-aria">360<sup><small>m2</small></sup>  <span>
-                                Living Area
-                            </span> </p>
-                       
-
-                        <button class="item__button  btn">Send Inquiry</button>
-                    </div>
-
-                </div>
-                <div class="recomendation__item item">
-                    <div class="item__img"><img src="assets/recomendation-2.png" alt=""></div>
-                    <div class="item__content">
-                        <p class="item__title">Perum griya asri</p>
-                        <p class="item__location">Bogor, Jawa Barat</p>
-
-                            <p class="item__price">
-                                $25,000
-                            </p>
-                            <p class="item__place-aria">360<sup><small>m2</small></sup>  <span>
-                                Living Area
-                            </span> </p>
-                       
-
-                        <button class="item__button  btn">Send Inquiry</button>
-                    </div>
-
-                </div>
-                <div class="recomendation__item item">
-                    <div class="item__img"><img src="assets/recomendation-3.png" alt=""></div>
-                    <div class="item__content">
-                        <p class="item__title">Perum griya asri</p>
-                        <p class="item__location">Bogor, Jawa Barat</p>
-
-                            <p class="item__price">
-                                $25,000
-                            </p>
-                            <p class="item__place-aria">360<sup><small>m2</small></sup>  <span>
-                                Living Area
-                            </span> </p>
-                       
-
-                        <button class="item__button  btn">Send Inquiry</button>
-                    </div>
-
-                </div>
+    
+        </section>
+        <section class="about-us">
+            <div class="about-us__container">
+    
             </div>
-
-        </div>
-
-    </section>
-    <section class="about-us">
-        <div class="about-us__container">
-
-        </div>
-    </section>
-
+        </section>
+    
+    </main>
+   
     
 
 
