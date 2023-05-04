@@ -1,18 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rubik:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 :root {
   --accent-color: #69B99D;
-  --second-colot:#A6A6A6;
-  --bg-second:#F5F5F5;
-  --main-text-color:#1F2744;
-  --description-color:#73788C;
+  --second-colot: #A6A6A6;
+  --bg-second: #F5F5F5;
+  --main-text-color: #1F2744;
+  --description-color: #73788C;
   --white-color: #fff;
-  --link-color:#8E8E8E;
+  --link-color: #8E8E8E;
+  --shadow: 0px 0px 20px rgba(105, 185, 157, 0.58);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 ul {
@@ -25,6 +32,7 @@ a {
 
 * img {
   max-width: 100%;
+  width: 100%;
 }
 
 .title {
@@ -35,15 +43,53 @@ a {
   color: #054457;
 }
 
+.subtitle {
+  width: 90%;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.0025em;
+  color: #73788C;
+}
+
 [class*=__container] {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.lable {
+  font-weight: 500;
+  background: #F8F9FE;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  color: #69B99D;
+  padding: 12px 24px;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.btn {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.0025em;
+  cursor: pointer;
+}
+.btn:hover, .btn:active {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: var(--shadow);
+}
+
+/*-----header-------*/
 .header {
   padding: 32px 0;
   position: fixed;
   width: 100%;
+  z-index: 3;
 }
 .header__container {
   display: flex;
@@ -95,6 +141,7 @@ a {
   background-color: var(--accent-color);
 }
 
+/*---HERO----*/
 .hero {
   background-color: var(--bg-second);
   height: 90vh;
@@ -102,4 +149,131 @@ a {
   background-image: url(../assets/bg.png);
   background-repeat: no-repeat;
   background-position: right bottom;
-}/*# sourceMappingURL=style.css.map */
+  display: flex;
+  align-items: center;
+}
+.hero__container {
+  width: 100%;
+}
+.hero__content {
+  width: 600px;
+  padding-bottom: 180px;
+}
+.hero__title {
+  font-size: 64px;
+  line-height: 74px;
+  letter-spacing: 0.0025em;
+  color: #1F2744;
+  margin-top: 32px;
+}
+.hero__subtitle {
+  width: 90%;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.0025em;
+  color: #73788C;
+}
+
+/*---END HERO----*/
+/*---RECOMENDATION----*/
+.recomendation {
+  margin: 120px 0;
+}
+.recomendation__container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.recomendation__header {
+  width: 45%;
+  display: grid;
+  gap: 16px;
+  position: relative;
+}
+.recomendation__list {
+  display: flex;
+  gap: 34px;
+}
+.recomendation__item {
+  width: 100%;
+}
+.recomendation__learn-more {
+  position: absolute;
+  bottom: 0;
+  right: -112%;
+  color: var(--accent-color);
+}
+.recomendation__learn-more::after {
+  content: "";
+  background-image: url("../assets/Arrow-Right.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -38px;
+  top: 2px;
+}
+.recomendation__learn-more:hover {
+  cursor: pointer;
+}
+.recomendation__learn-more:hover::after {
+  box-shadow: var(--shadow);
+}
+
+.item {
+  border: 1px solid #DEDCDA;
+  padding: 16px;
+  background-color: #FEFEFF;
+}
+.item__content {
+  width: 100%;
+}
+.item__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.0025em;
+  color: var(--main-text-color);
+}
+.item__location {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  /* identical to box height, or 162% */
+  letter-spacing: 0.0025em;
+  color: #A6A6A6;
+}
+.item__price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.0025em;
+  color: var(--accent-color);
+  display: inline;
+  margin-right: 32px;
+}
+.item__place-aria {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.0025em;
+  color: var(--main-text-color);
+  padding: 4px 8px;
+  background-color: var(--bg-second);
+  display: inline-block;
+}
+.item__place-aria sup {
+  font-family: "Roboto Slab", serif;
+  line-height: initial;
+}
+.item__place-aria span {
+  color: var(--second-colot);
+}
+.item__button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px 48px;
+}
+
+/*----END RECOMENDATION---*/
+/*----ABOUT US----*/
+/*----END ABOUT US----*//*# sourceMappingURL=style.css.map */
