@@ -35,13 +35,25 @@ a {
   width: 100%;
 }
 
+[class*=__container] {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .title {
   font-family: "Rubik", sans-serif;
-  font-size: clamp(1.5rem, 1.075rem + 2.12vw, 3rem);
+  font-size: 48px;
   line-height: 56px;
   letter-spacing: 0.5px;
   color: #054457;
   margin: 16px 0;
+}
+@media (max-width: 768px) {
+  .title {
+    line-height: 30px;
+    font-size: 25px;
+  }
 }
 @media (max-width: 425px) {
   .title {
@@ -56,11 +68,10 @@ a {
   letter-spacing: 0.0025em;
   color: #73788C;
 }
-
-[class*=__container] {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 14px;
+  }
 }
 
 .lable {
@@ -90,6 +101,15 @@ a {
   color: var(--white-color);
   background-color: var(--accent-color);
   box-shadow: var(--shadow);
+}
+
+.page {
+  margin-top: 120px;
+}
+@media (max-width: 768px) {
+  .page {
+    margin-top: 60px;
+  }
 }
 
 /*-------Header-------*/
@@ -124,19 +144,25 @@ a {
   cursor: pointer;
   font-weight: 500;
 }
+@media (max-width: 425px) {
+  .header__btn {
+    padding-inline: 20px;
+  }
+}
 
 @media (max-width: 996px) {
   .menu {
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     height: 100vh;
     width: 80%;
     display: flex;
+    justify-content: center;
     margin: 0 auto;
     overflow: auto;
     padding: 20px 0;
-    background-color: var(--accent-color);
+    background-color: var(--bg-second);
     transition: left 0.2s;
   }
   .menu._active {
@@ -148,6 +174,11 @@ a {
   gap: 48px;
   align-items: center;
   height: 40px;
+}
+@media (max-width: 996px) {
+  .menu__body {
+    flex-direction: column;
+  }
 }
 .menu__item {
   position: relative;
@@ -253,7 +284,11 @@ a {
   width: -moz-min-content;
   width: min-content;
   margin-top: 64px;
-  margin-bottom: 100px;
+}
+@media (max-width: 800px) {
+  .filter {
+    width: 100%;
+  }
 }
 .filter__tab {
   padding: 12px 32px;
@@ -312,9 +347,6 @@ a {
 
 /*-------END Hero-------*/
 /*-------RECOMENDATION-------*/
-.recomendation {
-  margin: 120px 0;
-}
 .recomendation__container {
   display: flex;
   flex-direction: column;
@@ -367,8 +399,7 @@ a {
 }
 @media (max-width: 425px) {
   .recomendation__learn-more::after {
-    top: 2px;
-    left: 30%;
+    left: 35%;
   }
 }
 .recomendation__learn-more:hover {
@@ -438,7 +469,6 @@ a {
   position: relative;
 }
 .about-us__container {
-  margin: 120px auto;
   display: flex;
   gap: 56px;
   align-items: center;
@@ -447,9 +477,6 @@ a {
   .about-us__container {
     flex-direction: column;
   }
-}
-.about-us__result {
-  padding: 12px 32px;
 }
 .about-us__img {
   position: relative;
@@ -465,9 +492,14 @@ a {
   padding: 12px 32px;
   background-color: var(--white-color);
 }
-@media (max-width: 425px) {
+@media (max-width: 1024px) {
   .about-us__result {
-    padding-inline: 7px;
+    padding: 12px 5px;
+  }
+}
+@media (max-width: 768px) {
+  .about-us__result {
+    padding-inline: 10px;
   }
 }
 .about-us__result-text {
@@ -480,7 +512,7 @@ a {
   align-items: center;
   gap: 8px;
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .about-us__result-text {
     font-size: 23px;
   }
@@ -519,6 +551,11 @@ a {
   top: 0;
   left: 96px;
   filter: drop-shadow(0px 23px 20px rgba(0, 0, 0, 0.15));
+}
+@media (max-width: 768px) {
+  .reviews {
+    padding: 10px;
+  }
 }
 @media (max-width: 320px) {
   .reviews {
