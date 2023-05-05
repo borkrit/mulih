@@ -23,3 +23,10 @@ function openCity(evt, typeTab) {
   document.getElementById(typeTab).style.display = "flex";
   evt.currentTarget.className += " active";
 }
+
+
+const menu = document.querySelector('.menu');
+const menuIcon = document.querySelector('.menu-icon');
+menuIcon.addEventListener('click',()=>{
+  menu.classList.toggle('_active')
+})
