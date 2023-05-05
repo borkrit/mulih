@@ -217,6 +217,13 @@ a {
   background-size: contain;
   background-position: right bottom;
 }
+@media (max-width: 425px) {
+  .hero {
+    height: -moz-max-content;
+    height: max-content;
+    background-size: inherit;
+  }
+}
 .hero__container {
   width: 100%;
 }

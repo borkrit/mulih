@@ -258,6 +258,10 @@ a {
     //     margin: 0 auto;
     // }
 
+    @media (max-width:425px) {
+        height: max-content;
+        background-size: inherit;
+    }
 
 
     &__container {
