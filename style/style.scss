@@ -48,6 +48,10 @@ a {
     color: #054457;
     margin: 16px 0;
 
+    @media (max-width:425px) {
+        line-height: 30px;
+    }
+
 }
 .subtitle{
     width: 90%;
@@ -227,15 +231,20 @@ a {
 
 .login {
     background-color: var(--accent-color);
+
+    @media (max-width:425px) {
+       display: none;   
+    }
 }
 /*-------END Header-------*/
 
 /*-------Hero-------*/
 .hero {
     padding-top: 152px;
-    padding-bottom: 100px;
+    // padding-bottom: 100px;
     background-color: var(--bg-second);
-    height: 90vh;
+    height: 800px;
+    // TODO
     width: 100vw;
     background-image: url(../assets/bg.png);
     background-repeat: no-repeat;
@@ -284,7 +293,7 @@ a {
 
 
 .filter{
-    max-width: 700px;
+    width: min-content;
     margin-top: 64px;
     margin-bottom: 100px;
 
@@ -371,11 +380,22 @@ a {
         display: grid;
         gap: 16px;
         position: relative;
+
+        @media (max-width:425px) {
+            width: 100%;
+        }
+
     }
 
     &__list {
         display: flex;
         gap: 34px;
+
+
+
+        @media (max-width:425px) {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -389,6 +409,13 @@ a {
         right: -112%;
         color: var(--accent-color);
 
+        @media (max-width:425px) {
+            position: relative;  
+            right: inherit;  
+        }
+
+
+
         &::after{
             content:'';
             background-image: url('../assets/Arrow-Right.svg');
@@ -398,6 +425,13 @@ a {
             position: absolute;
             right: -38px;
             top: 2px;
+
+            @media (max-width:425px) {
+                top: 2px;
+                left: 30%;   
+            }
+
+            
 
             
 
@@ -493,12 +527,15 @@ a {
         display: flex;
         gap: 56px;
         align-items: center;
+
+
+
+        @media (max-width:425px) {
+            flex-direction: column;
+        }
     }
 
-    &__reviews{
-        padding: 32px;
-
-    }
+   
     &__result{
         padding: 12px 32px;
     }
@@ -517,7 +554,10 @@ a {
         gap: 32px;
         padding: 12px 32px;
         background-color: var(--white-color);
-        
+
+        @media (max-width:425px) {
+            padding-inline: 7px;
+        }
 
        
     }
@@ -532,6 +572,10 @@ a {
         align-items: center;
         gap: 8px;
 
+        @media (max-width:425px) {
+            font-size: 23px;
+        }
+
         span{
             width: min-content;
             font-weight: 400;
@@ -540,6 +584,11 @@ a {
             letter-spacing: 0.0025em;
             color: #A6A6A6;
             display: block;
+
+            @media (max-width:425px) {
+                font-size: 12px;
+                line-height: 17px;
+            }
         }
 
     }
@@ -565,6 +614,12 @@ a {
     left: 96px;
     filter: drop-shadow(0px 23px 20px rgba(0, 0, 0, 0.15));
 
+    @media (max-width:320px) {
+        padding: 10px;
+        left: 30px;
+        max-width: 220px;
+    }
+
     &::before{
         content: '';
         background-image: url('../assets/Tick.svg');
@@ -582,6 +637,11 @@ a {
         line-height: 80px;
         letter-spacing: 0.0025em;
         color: #054457;
+
+        @media (max-width:320px) {
+            font-size: 40px;
+            line-height: 40px;
+        }
     }
 
     &__starts{
