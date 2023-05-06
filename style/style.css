@@ -20,6 +20,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 ul {
@@ -500,6 +501,11 @@ a {
 @media (max-width: 768px) {
   .about-us__result {
     padding-inline: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .about-us__result {
+    gap: 5px;
   }
 }
 .about-us__result-text {
