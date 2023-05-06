@@ -40,7 +40,7 @@ a {
     width: 100%;
 }
 [class*="__container"] {
-    max-width: 1200px;
+    max-width: calc(1200px - 1rem);
     margin: 0 auto;
     padding: 0 1rem;
 }
